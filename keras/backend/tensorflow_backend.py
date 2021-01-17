@@ -700,7 +700,7 @@ def is_keras_tensor(x):
 
 
 def is_tensor(x):
-    return isinstance(x, tf_ops._TENSOR_LIKE_TYPES) or tf_ops.is_dense_tensor_like(x)
+    return isinstance(x, tuple) or tf_ops.is_dense_tensor_like(x)
 
 
 @symbolic
